@@ -623,7 +623,8 @@ Saludos cordiales.</div>
     const inboxCount = document.getElementById('inbox-count');
     const totalCount = document.getElementById('total-count');
 
-    window.addEventListener('DOMContentLoaded', () => {
+    // Función para actualizar los contadores aleatorios
+    function actualizarContadores() {
       // Aleatorio para Recibidos (entre 15 y 450)
       const randomInbox = Math.floor(Math.random() * (450 - 15 + 1)) + 15;
       inboxCount.textContent = randomInbox;
@@ -631,6 +632,10 @@ Saludos cordiales.</div>
       // Aleatorio para Total de Correos (entre 1,000 y 25,000)
       const randomTotal = Math.floor(Math.random() * (25000 - 1000 + 1)) + 1000;
       totalCount.textContent = randomTotal.toLocaleString('en-US');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      actualizarContadores();
     });
 
     function getInitials(name) {
@@ -723,6 +728,9 @@ Saludos cordiales.</div>
 
     downloadBtn.addEventListener('click', () => {
       if(downloadBtn.disabled) return;
+
+      // Actualizar contadores aleatorios cada vez que se presiona el botón
+      actualizarContadores();
 
       downloadBtn.innerHTML = '<span class="material-symbols-outlined">hourglass_empty</span> Generando imagen...';
       downloadBtn.disabled = true;

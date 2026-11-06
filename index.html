@@ -120,3 +120,531 @@
 
   /* Top bar 2024 */
   .topbar {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 16px 0 24px;
+    gap: 20px;
+    background: transparent;
+  }
+  .menu-icon { color: #5f6368; cursor: pointer; padding: 12px; border-radius: 50%; }
+  .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .logo-text { font-size: 22px; color: #444746; font-weight: 400; letter-spacing: -0.5px; }
+  .search-bar {
+    flex: 1;
+    max-width: 720px;
+    display: flex;
+    align-items: center;
+    background: #e9eef6;
+    border-radius: 28px;
+    height: 48px;
+    padding: 0 8px;
+    color: #444746;
+    gap: 10px;
+  }
+  .search-icon, .tune-icon { padding: 8px; border-radius: 50%; cursor: pointer; color: #444746; }
+  .search-bar span.placeholder { flex: 1; color: #444746; font-size: 16px; }
+  
+  .topbar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #444746;
+    flex-shrink: 0;
+  }
+  .status-pill {
+    display: flex; align-items: center; gap: 8px;
+    background: #ffffff; border-radius: 20px; padding: 6px 12px;
+    font-size: 14px; color: #444746; margin-right: 8px;
+  }
+  .status-dot { width: 9px; height: 9px; border-radius: 50%; background: #1e8e3e; }
+  .circle-icon {
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #444746; cursor: pointer;
+  }
+  .avatar-google {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: #dbe1e8; color: #5f6368;
+    display: flex; align-items: center; justify-content: center;
+    margin-left: 8px;
+  }
+
+  /* Layout 2024 */
+  .layout { 
+    display: flex; 
+    padding: 0 16px 16px 0; 
+    gap: 16px; 
+    height: calc(100% - 64px);
+  }
+  
+  /* Left Sidebar */
+  .sidebar {
+    width: 256px;
+    flex-shrink: 0;
+    padding: 12px 16px 0 16px;
+  }
+  .compose-btn {
+    display: flex; align-items: center; gap: 14px;
+    background: #c2e7ff; color: #001d35;
+    border-radius: 16px; padding: 16px 24px;
+    margin: 0 0 16px 0; font-weight: 500; font-size: 15px;
+    width: fit-content;
+  }
+  .compose-btn .material-symbols-outlined { font-size: 24px; }
+  .nav-item {
+    display: flex; align-items: center; gap: 18px;
+    padding: 0 16px; height: 32px; border-radius: 16px;
+    color: #444746; font-size: 14px; margin-bottom: 2px;
+  }
+  .nav-item.active { background: #d3e3fd; color: #001d35; font-weight: 700; }
+  .nav-item .count { margin-left: auto; font-weight: 400; font-size: 12px; color: #444746; }
+  .nav-item.active .count { color: #001d35; font-weight: 700; }
+  .nav-icon { color: #444746; flex-shrink: 0; font-size: 20px; }
+  .nav-item.active .nav-icon { color: #001d35; font-variation-settings: 'FILL' 1; }
+  
+  .labels-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 16px 8px 16px; color: #444746; font-size: 14px; font-weight: 500;
+  }
+
+  /* Main Floating Container 2024 */
+  .main {
+    flex: 1;
+    min-width: 0;
+    background: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .toolbar {
+    display: flex; align-items: center; gap: 20px;
+    padding: 12px 24px; color: #444746;
+  }
+  .toolbar-icons { display: flex; align-items: center; gap: 20px; }
+  .pager { margin-left: auto; display: flex; align-items: center; gap: 12px; font-size: 12px; color: #444746; }
+
+  .msg-wrap { padding: 4px 32px 8px 32px; flex: 1; }
+  .subject-row { display: flex; align-items: center; gap: 14px; padding: 10px 0 26px 0; }
+  .subject-line { font-size: 22px; font-weight: 400; color: #1f1f1f; }
+  .chip {
+    display: flex; align-items: center; gap: 4px;
+    background: #e9eef6; color: #444746; font-size: 12px;
+    border-radius: 4px; padding: 2px 6px;
+  }
+  .chip .material-symbols-outlined { font-size: 14px; }
+  .subject-row-icons { margin-left: auto; display: flex; gap: 16px; color: #444746; }
+
+  .msg-header { display: flex; align-items: flex-start; gap: 16px; padding: 4px 0 24px 0; }
+  .avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: #007b83; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 500; flex-shrink: 0;
+  }
+  .msg-header-main { flex: 1; min-width: 0; }
+  .sender-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .sender-name { font-size: 14px; font-weight: 700; color: #1f1f1f; }
+  .sender-email { font-size: 12px; color: #5f6368; }
+  .to-line { font-size: 12px; color: #5f6368; margin-top: 2px; display: flex; align-items: center; gap: 4px; }
+  .to-line .material-symbols-outlined { font-size: 16px; }
+  
+  .msg-header-right {
+    display: flex; align-items: center; gap: 16px;
+    color: #444746; font-size: 12px; flex-shrink: 0; margin-left: 12px;
+  }
+
+  .body-text { font-size: 14px; color: #1f1f1f; padding-bottom: 34px; max-width: 900px; }
+
+  .action-row { display: flex; align-items: center; gap: 12px; padding: 4px 0 32px 0; }
+  .action-btn {
+    display: flex; align-items: center; gap: 8px;
+    border: 1px solid #747775; border-radius: 20px;
+    padding: 8px 16px; font-size: 14px; color: #444746; font-weight: 500;
+  }
+  .action-btn.icon-only { padding: 8px; border-radius: 50%; }
+  .action-btn .material-symbols-outlined { font-size: 18px; color: #444746; }
+
+  /* Right Sidebar (Google Workspace Icons) */
+  .right-sidebar {
+    width: 48px; flex-shrink: 0;
+    display: flex; flex-direction: column; align-items: center; gap: 24px;
+    padding-top: 12px; color: #444746;
+  }
+  .workspace-icon { width: 20px; height: 20px; font-size: 20px; color: #444746; }
+  .divider { width: 20px; height: 1px; background: #dadce0; }
+
+</style>
+</head>
+<body>
+
+  <div class="app-container">
+    <div class="control-panel">
+      <h2>Generador Gmail 2024</h2>
+      <p class="subtitle">Mockup actualizado con limpieza automática de texto.</p>
+
+      <div class="form-group">
+        <label for="input-name">Nombre del Remitente</label>
+        <input type="text" id="input-name" value="Israel López">
+      </div>
+
+      <div class="form-group">
+        <label for="input-email">Correo del Remitente</label>
+        <!-- Valor corregido sin espacios -->
+        <input type="text" id="input-email" value="israel.lopez@fiscalesotman.com.mx">
+      </div>
+      
+      <div class="form-group">
+        <label for="input-recipient">Nombre del Destinatario</label>
+        <input type="text" id="input-recipient" value="Myrna Aguilar">
+      </div>
+
+      <div class="form-group">
+        <label for="input-subject">Asunto del Correo</label>
+        <input type="text" id="input-subject" value="COTIZACION // CONSULTORÍA EN EL DESARROLLO DE OBJETIVOS EMPRESARIALES">
+      </div>
+
+      <div class="form-group">
+        <label for="input-body">Cuerpo del Mensaje</label>
+        <!-- Contenido limpio por defecto -->
+        <div id="input-body" class="rich-textarea" contenteditable="true">
+          <p>Hola, Myrna:</p>
+          <p>Espero que también estés teniendo una excelente semana.</p>
+          <p>Se integra la información con el alcance, cualquier duda de la cotización quedo atento.</p>
+          <p>Saludos cordiales.</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="input-time">Hora / Fecha (Debe ser en horario hábil)</label>
+        <input type="datetime-local" id="input-time" value="2023-09-08T09:51">
+        <span id="time-warning" style="color: #d93025; font-size: 13px; font-weight: 500; display: none;">
+          Esta no es una fecha ni hora hábil. Asigna otra.
+        </span>
+      </div>
+
+      <button class="download-btn" id="download-btn">
+        <span class="material-symbols-outlined">photo_camera</span> Generar y Descargar Screenshot
+      </button>
+    </div>
+
+    <!-- Vista Previa -->
+    <div class="preview-container">
+      <div class="gmail-mockup" id="gmail-mockup">
+        
+        <div class="topbar">
+          <span class="material-symbols-outlined menu-icon">menu</span>
+          <div class="logo">
+            <svg width="34" height="26" viewBox="0 0 48 36" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="46" height="34" rx="5" fill="#ffffff"/>
+              <path d="M7 27 L7 10" stroke="#4285F4" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <path d="M7 10 L24 22" stroke="#EA4335" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <path d="M24 22 L41 10" stroke="#FBBC05" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <path d="M41 10 L41 27" stroke="#34A853" stroke-width="7" stroke-linecap="round" fill="none"/>
+            </svg>
+            <span class="logo-text">Gmail</span>
+          </div>
+          <div class="search-bar">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <span class="placeholder">Buscar en el correo electrónico</span>
+            <span class="material-symbols-outlined tune-icon">tune</span>
+          </div>
+          <div class="topbar-right">
+            <div class="status-pill"><span class="status-dot"></span> Activo <span class="material-symbols-outlined" style="font-size: 16px;">arrow_drop_down</span></div>
+            <span class="material-symbols-outlined circle-icon">help</span>
+            <span class="material-symbols-outlined circle-icon">settings</span>
+            <span class="material-symbols-outlined circle-icon">apps</span>
+            <div class="avatar-google"><span class="material-symbols-outlined">person</span></div>
+          </div>
+        </div>
+
+        <div class="layout">
+          <div class="sidebar">
+            <div class="compose-btn"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0, 'wght' 300;">edit</span> Redactar</div>
+            <div class="nav-item active"><span class="material-symbols-outlined nav-icon">inbox</span> Recibidos <span class="count" id="inbox-count"></span></div>
+            <div class="nav-item"><span class="material-symbols-outlined nav-icon">star</span> Destacados</div>
+            <div class="nav-item"><span class="material-symbols-outlined nav-icon">schedule</span> Pospuestos</div>
+            <div class="nav-item"><span class="material-symbols-outlined nav-icon">send</span> Enviados</div>
+            <div class="nav-item"><span class="material-symbols-outlined nav-icon">drafts</span> Borradores</div>
+            <div class="nav-item"><span class="material-symbols-outlined nav-icon">expand_more</span> Más</div>
+            
+            <div class="labels-header">
+              <span>Etiquetas</span>
+              <span class="material-symbols-outlined" style="font-size: 18px; cursor: pointer;">add</span>
+            </div>
+          </div>
+
+          <div class="main">
+            <div class="toolbar">
+              <span class="material-symbols-outlined">arrow_back</span>
+              <div class="toolbar-icons">
+                <span class="material-symbols-outlined">archive</span>
+                <span class="material-symbols-outlined">report</span>
+                <span class="material-symbols-outlined">delete</span>
+                <span style="border-left: 1px solid #dadce0; height: 20px; margin: 0 4px;"></span>
+                <span class="material-symbols-outlined">mark_email_read</span>
+                <span class="material-symbols-outlined">schedule</span>
+                <span class="material-symbols-outlined">add_task</span>
+                <span style="border-left: 1px solid #dadce0; height: 20px; margin: 0 4px;"></span>
+                <span class="material-symbols-outlined">drive_file_move</span>
+                <span class="material-symbols-outlined">label</span>
+                <span class="material-symbols-outlined">more_vert</span>
+              </div>
+              <div class="pager">1 de <span id="total-count"></span> <span class="material-symbols-outlined">chevron_left</span><span class="material-symbols-outlined">chevron_right</span></div>
+            </div>
+
+            <div class="msg-wrap">
+              <div class="subject-row">
+                <span class="subject-line" id="preview-subject">COTIZACION // CONSULTORÍA EN EL DESARROLLO DE OBJETIVOS EMPRESARIALES</span>
+                <span class="chip">Recibidos <span class="material-symbols-outlined">close</span></span>
+                <div class="subject-row-icons">
+                  <span class="material-symbols-outlined">print</span>
+                  <span class="material-symbols-outlined">open_in_new</span>
+                </div>
+              </div>
+
+              <div class="msg-header">
+                <div class="avatar" id="preview-initials">IL</div>
+                <div class="msg-header-main">
+                  <div class="sender-row">
+                    <span class="sender-name" id="preview-name">Israel López</span>
+                    <span class="sender-email" id="preview-email">&lt;israel.lopez@fiscalesotman.com.mx&gt;</span>
+                  </div>
+                  <div class="to-line">para <span id="preview-recipient">Myrna Aguilar</span> <span class="material-symbols-outlined">arrow_drop_down</span></div>
+                </div>
+                <div class="msg-header-right">
+                  <span id="preview-time">vie, 8 sep 2023, 9:51 a. m.</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">add_reaction</span>
+                  <span class="material-symbols-outlined">reply</span>
+                  <span class="material-symbols-outlined">more_vert</span>
+                </div>
+              </div>
+
+              <!-- CONTENEDOR ENRIQUECIDO -->
+              <div class="body-text" id="preview-body">
+                <p>Hola, Myrna:</p>
+                <p>Espero que también estés teniendo una excelente semana.</p>
+                <p>Se integra la información con el alcance, cualquier duda de la cotización quedo atento.</p>
+                <p>Saludos cordiales.</p>
+              </div>
+
+              <div class="action-row">
+                <div class="action-btn"><span class="material-symbols-outlined">reply</span> Responder</div>
+                <div class="action-btn"><span class="material-symbols-outlined">reply_all</span> Responder a todos</div>
+                <div class="action-btn"><span class="material-symbols-outlined">forward</span> Reenviar</div>
+                <div class="action-btn icon-only"><span class="material-symbols-outlined">add_reaction</span></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Workspace Sidebar Derecha -->
+          <div class="right-sidebar">
+            <span class="material-symbols-outlined workspace-icon" style="color: #1a73e8;">calendar_month</span>
+            <span class="material-symbols-outlined workspace-icon" style="color: #fbbc04;">lightbulb</span>
+            <span class="material-symbols-outlined workspace-icon" style="color: #1e8e3e;">task_alt</span>
+            <span class="material-symbols-outlined workspace-icon" style="color: #1a73e8;">contacts</span>
+            <div class="divider"></div>
+            <span class="material-symbols-outlined workspace-icon">add</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const inputName = document.getElementById('input-name');
+    const inputEmail = document.getElementById('input-email');
+    const inputRecipient = document.getElementById('input-recipient');
+    const inputSubject = document.getElementById('input-subject');
+    const inputBody = document.getElementById('input-body');
+    const inputTime = document.getElementById('input-time');
+
+    const previewName = document.getElementById('preview-name');
+    const previewEmail = document.getElementById('preview-email');
+    const previewRecipient = document.getElementById('preview-recipient');
+    const previewSubject = document.getElementById('preview-subject');
+    const previewBody = document.getElementById('preview-body');
+    const previewTime = document.getElementById('preview-time');
+    const previewInitials = document.getElementById('preview-initials');
+    
+    const timeWarning = document.getElementById('time-warning');
+    const downloadBtn = document.getElementById('download-btn');
+    const gmailMockup = document.getElementById('gmail-mockup');
+    const inboxCount = document.getElementById('inbox-count');
+    const totalCount = document.getElementById('total-count');
+
+    window.addEventListener('DOMContentLoaded', () => {
+      // Aleatorio para Recibidos (entre 1 y 200)
+      const randomInbox = Math.floor(Math.random() * (200 - 1 + 1)) + 1;
+      inboxCount.textContent = randomInbox;
+
+      // Aleatorio para Total de Correos
+      const randomTotal = Math.floor(Math.random() * (25000 - 11000 + 1)) + 11000;
+      totalCount.textContent = randomTotal.toLocaleString('es-ES');
+    });
+
+    function getInitials(name) {
+      if (!name) return 'GM';
+      const parts = name.trim().split(' ');
+      if (parts.length >= 2) {
+        return (parts[0][0] + parts[1][0]).toUpperCase();
+      }
+      return name.substring(0, 2).toUpperCase();
+    }
+
+    inputName.addEventListener('input', (e) => {
+      const val = e.target.value;
+      previewName.textContent = val;
+      previewInitials.textContent = getInitials(val);
+    });
+
+    // Filtro para destruir los espacios en blanco del email
+    inputEmail.addEventListener('input', (e) => {
+      const val = e.target.value.replace(/\s+/g, '');
+      e.target.value = val; // Actualiza también el input visible
+      previewEmail.textContent = `<${val}>`;
+    });
+
+    inputRecipient.addEventListener('input', (e) => {
+      previewRecipient.textContent = e.target.value;
+    });
+
+    inputSubject.addEventListener('input', (e) => {
+      previewSubject.textContent = e.target.value;
+    });
+
+    inputBody.addEventListener('input', (e) => {
+      previewBody.innerHTML = e.target.innerHTML;
+    });
+
+    // Filtro avanzado al pegar texto en el cuerpo del mensaje
+    inputBody.addEventListener('paste', (e) => {
+      e.preventDefault();
+      const clipboardData = e.clipboardData || window.clipboardData;
+      let htmlData = clipboardData.getData('text/html');
+      
+      if (htmlData) {
+        // Elimina los espacios vacíos justo antes de comas, puntos y dos puntos
+        htmlData = htmlData.replace(/\s+([,.:;])/g, '$1');
+        document.execCommand('insertHTML', false, htmlData);
+      } else {
+        let textData = clipboardData.getData('text/plain');
+        textData = textData.replace(/\s+([,.:;])/g, '$1');
+        let formattedText = textData.split('\n').map(line => `<p>${line}</p>`).join('');
+        document.execCommand('insertHTML', false, formattedText);
+      }
+    });
+
+    function validarFechaHabil(fecha) {
+      const day = fecha.getDay(); 
+      if (day === 0 || day === 6) return false;
+      
+      const hours = fecha.getHours();
+      if (hours < 9 || hours >= 18) return false;
+      
+      const mm = String(fecha.getMonth() + 1).padStart(2, '0');
+      const dd = String(fecha.getDate()).padStart(2, '0');
+      const fechaCorta = `${mm}-${dd}`;
+      
+      const festivosOficiales = ['01-01', '02-05', '03-21', '05-01', '09-16', '10-01', '11-20', '12-25'];
+      if (festivosOficiales.includes(fechaCorta)) return false;
+      
+      return true;
+    }
+
+    function formatearFechaGmail(fecha) {
+      const dias = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+      const meses = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+      
+      const nombreDia = dias[fecha.getDay()];
+      const numeroDia = fecha.getDate();
+      const nombreMes = meses[fecha.getMonth()];
+      const anio = fecha.getFullYear();
+      
+      let horas = fecha.getHours();
+      const minutos = String(fecha.getMinutes()).padStart(2, '0');
+      const ampm = horas >= 12 ? 'p. m.' : 'a. m.';
+      
+      horas = horas % 12;
+      horas = horas ? horas : 12; 
+      
+      return `${nombreDia}, ${numeroDia} ${nombreMes} ${anio}, ${horas}:${minutos} ${ampm}`;
+    }
+
+    inputTime.addEventListener('input', (e) => {
+      const dateVal = new Date(e.target.value);
+      
+      if (isNaN(dateVal.getTime())) return; 
+
+      if (!validarFechaHabil(dateVal)) {
+        timeWarning.style.display = 'block';
+        downloadBtn.disabled = true;
+      } else {
+        timeWarning.style.display = 'none';
+        downloadBtn.disabled = false;
+        previewTime.textContent = formatearFechaGmail(dateVal);
+      }
+    });
+
+    inputTime.dispatchEvent(new Event('input'));
+
+    downloadBtn.addEventListener('click', () => {
+      if(downloadBtn.disabled) return;
+
+      downloadBtn.innerHTML = '<span class="material-symbols-outlined">hourglass_empty</span> Generando imagen...';
+      downloadBtn.disabled = true;
+
+      document.fonts.ready.then(() => {
+        html2canvas(gmailMockup, {
+          scale: 2, 
+          width: 1366,
+          windowWidth: 1366,
+          useCORS: true,
+          logging: false,
+          onclone: function(clonedDoc) {
+            clonedDoc.body.style.width = '1366px';
+            clonedDoc.body.style.minWidth = '1366px';
+
+            const clonedMockup = clonedDoc.getElementById('gmail-mockup');
+            clonedMockup.style.width = '1366px';
+            clonedMockup.style.minWidth = '1366px'; 
+            clonedMockup.style.maxWidth = '1366px';
+            clonedMockup.style.height = 'auto'; 
+            clonedMockup.style.maxHeight = 'none'; 
+            clonedMockup.style.margin = '0';
+            clonedMockup.style.borderRadius = '0'; 
+            
+            const layout = clonedMockup.querySelector('.layout');
+            if (layout) layout.style.height = 'auto';
+          }
+        }).then(canvas => {
+          const imageURL = canvas.toDataURL('image/png');
+
+          let rawSubject = inputSubject.value;
+          let safeName = rawSubject.replace(/[<>:"/\\|?*\x00-\x1F]/g, '').trim();
+          if (!safeName) safeName = 'mockup-gmail-2024'; 
+
+          const link = document.createElement('a');
+          link.href = imageURL;
+          link.download = safeName + '.png'; 
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          downloadBtn.innerHTML = '<span class="material-symbols-outlined">photo_camera</span> Generar y Descargar Screenshot';
+          downloadBtn.disabled = false;
+        }).catch(err => {
+          console.error("Error al generar la captura:", err);
+          alert("Hubo un error al generar la captura de pantalla.");
+          downloadBtn.innerHTML = '<span class="material-symbols-outlined">photo_camera</span> Generar y Descargar Screenshot';
+          downloadBtn.disabled = false;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
